@@ -6,12 +6,8 @@ import axios from "axios";
 import "./App.css";
 
 // ─── Config ───────────────────────────────────────────────────────────────────
-// At the top of App.jsx, after imports
-const API = axios.create({ 
-  baseURL: import.meta.env.VITE_API_URL || "https://aniruddha-singh-aifsd-end-sem.onrender.com/api" 
-});
+const API = axios.create({ baseURL: "https://aniruddha-singh-aifsd-end-sem.onrender.com" });
 
-// Rest of your code remains the same...
 API.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
   if (token) config.headers.Authorization = `Bearer ${token}`;
