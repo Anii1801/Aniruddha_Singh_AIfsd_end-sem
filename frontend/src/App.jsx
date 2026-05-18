@@ -6,7 +6,7 @@ import axios from "axios";
 import "./App.css";
 
 // ─── Config ───────────────────────────────────────────────────────────────────
-const API = axios.create({ baseURL: "https://aniruddha-singh-aifsd-end-sem.onrender.com" });
+const API = axios.create({ baseURL: "https://aniruddha-singh-aifsd-end-sem.onrender.com/api" });
 
 API.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
